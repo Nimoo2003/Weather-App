@@ -37,6 +37,7 @@
     padding: 1rem;
     border-radius: 0.4rem;
     color: white;
+    margin-bottom: 5%;
 }
 
 .section__inputs, .section__temperature{
@@ -44,5 +45,17 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--section-overlay);
+}
+.section__inputs>input{
+    border: 0.8px solid white;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 200;
+}
+.section__inputs>input:focus{
+    outline: none;
 }
 
