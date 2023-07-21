@@ -1,5 +1,6 @@
 import hotBg from "./assets/sunny.jpg"
 import coldBg from "./assets/cold.jpg"
+import Description from "./components/Description";
 function App() {
   return (
     <div className="app" style={{backgroundImage: `url(${coldBg})`}}>
@@ -20,6 +21,7 @@ function App() {
             </div>
           </div>
           { /* BOTTOM DESCRIPTION */}
+          <Description />
         </div>
       </div>
     </div>
