@@ -7,7 +7,7 @@ import { FaArrowDown } from "react-icons/fa";
 const Description = () => {
   return <div className="section section_descriptions">
     <div className='card'>
-        <div className='descriptions__car-icon'>
+        <div className='descriptions__card-icon'>
             <FaArrowDown />
             <small>min</small>
 
@@ -15,7 +15,7 @@ const Description = () => {
         <h2>32 C</h2>
     </div>
     <div className='card'>
-        <div className='descriptions__car-icon'>
+        <div className='descriptions__card-icon'>
             <FaArrowDown />
             <small>min</small>
 
@@ -23,7 +23,7 @@ const Description = () => {
         <h2>32 C</h2>
     </div>
     <div className='card'>
-        <div className='descriptions__car-icon'>
+        <div className='descriptions__card-icon'>
             <FaArrowDown />
             <small>min</small>
 
@@ -31,7 +31,7 @@ const Description = () => {
         <h2>32 C</h2>
     </div>
     <div className='card'>
-        <div className='descriptions__car-icon'>
+        <div className='descriptions__card-icon'>
             <FaArrowDown />
             <small>min</small>
 
