@@ -1,5 +1,5 @@
-.section__descriptions{
-    display: flex;
+.section_descriptions{
+    display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap:2.5rem
+    gap: 2.5rem;
 }
