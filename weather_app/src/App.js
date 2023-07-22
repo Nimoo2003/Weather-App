@@ -4,6 +4,7 @@ import Description from "./components/Description";
 import { useEffect } from "react";
 import { getFormattedWeather } from "./weatherService";
 
+
 function App() {
   useEffect(() => {
     const fetchWeather = async () => {

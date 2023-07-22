@@ -1,4 +1,6 @@
-const API_KEY='5d61b87ea6f4bdecb91aa3db05a60cea'
+require ('dotenv').config();
+
+const API_KEY = process.env.API_KEY
 
 const getFormattedWeather = async(city , units='metric') => {
 
