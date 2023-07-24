@@ -1,16 +1,34 @@
-require ('dotenv').config();
+require('dotenv-safe').config();
 
-const API_KEY = process.env.API_KEY
+const fetch = require('node-fetch');
 
-const getFormattedWeather = async(city , units='metric') => {
 
-    const URL = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}';
+const API_KEY = process.env.API_KEY;
 
-    const data = await fetch(URL) 
-        .then((res) => res.json())
-        .then((data) => data);
+const getFormattedWeather = async (city, units = 'metric') => {
+  
+  
+    const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}'; // Replace this with the actual API URL
+    const URL = `${baseURL}?q=${city}&units=${units}&appid=${API_KEY}`;
 
-        console.log(data);
+  try {
+    
+    const response = await fetch(URL);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    console.log(data);
+    return data; 
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    return null;
+  }
 };
 
-export {getFormattedWeather};
+module.exports = { getFormattedWeather };
+
+// const URL = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}';
+
+
