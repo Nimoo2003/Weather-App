@@ -1,11 +1,14 @@
 import hotBg from "./assets/sunny.jpg"
 import coldBg from "./assets/cold.jpg"
 import Description from "./components/Description";
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { getFormattedWeather } from "./weatherService";
 
 
 
+=======
+>>>>>>> parent of b77f29d (fetch api)
 function App() {
   return (
     <div className="app" style={{backgroundImage: `url(${coldBg})`}}>
