@@ -35,11 +35,11 @@ function App() {
               <h3>{weather.description}</h3>
             </div>
             <div className="temperature">
-              <h1>{`${weather.temp.toFixed()} C`}</h1>
+              <h1>{`${weather.temp.toFixed()} ${units === 'metric' ? 'C' : 'F'}`}</h1>
             </div>
           </div>
           { /* BOTTOM DESCRIPTION */}
-          <Description weather={weather} />
+          <Description weather={weather} units={units} />
         </div>
 
         )} 
