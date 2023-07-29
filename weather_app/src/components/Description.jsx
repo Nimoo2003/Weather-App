@@ -2,6 +2,9 @@ import React from 'react';
 import "./description.css"
 
 import { FaArrowDown } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+import { FaWind } from "react-icons/fa";
+
 import {BiHappy} from "react-icons/bi";
 import {MdCompress, MdOutlineWaterDrop} from "react-icons/md"
 import { icons } from 'react-icons/lib';
@@ -9,7 +12,7 @@ import { icons } from 'react-icons/lib';
 const Description = ({weather,units}) => {
 
     const tempUnit = units ==='metric' ? 'C' : 'F'
-    const windUnits = units === ' metric'? 'm/s' : 'm/h'
+    const windUnit = units === ' metric'? 'm/s' : 'm/h'
     const cards = [
         {
           id: 1,
@@ -56,38 +59,17 @@ const Description = ({weather,units}) => {
       ];
 
   return <div className="section section_descriptions">
-    <div className='card'>
-        <div className='descriptions__card-icon'>
-            <FaArrowDown />
-            <small>min</small>
-
-        </div>
-        <h2>32 C</h2>
-    </div>
-    <div className='card'>
-        <div className='descriptions__card-icon'>
-            <FaArrowDown />
-            <small>min</small>
-
-        </div>
-        <h2>32 C</h2>
-    </div>
-    <div className='card'>
-        <div className='descriptions__card-icon'>
-            <FaArrowDown />
-            <small>min</small>
-
-        </div>
-        <h2>32 C</h2>
-    </div>
-    <div className='card'>
-        <div className='descriptions__card-icon'>
-            <FaArrowDown />
-            <small>min</small>
-
-        </div>
-        <h2>32 C</h2>
-    </div>
+    {cards.map(({id , icon , title , data , unit}) => (
+      
+      <div key={id} className='card'>
+      <div className='descriptions__card-icon'>
+          {icon}
+          <small>{title}</small>
+      </div>
+      <h2>{`${data} ${unit}`}</h2>
+  </div>
+    ))}
+    
   </div>
 };
 
