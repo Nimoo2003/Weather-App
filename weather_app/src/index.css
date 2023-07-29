@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 .app{
@@ -23,7 +24,9 @@
 }
 .container{
     max-width: 800px;
-    margin:auto;
+    margin: auto;
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +40,6 @@
     padding: 1rem;
     border-radius: 0.4rem;
     color: white;
-    margin-bottom: 5%;
 }
 
 .section__inputs, .section__temperature{
@@ -90,3 +92,13 @@
     
 
 }
+
+@media (max-width: 767px) {
+    .app {
+      height: 100%; 
+    }
+  
+    .overlay {
+      height: 100%; 
+    }
+  }
